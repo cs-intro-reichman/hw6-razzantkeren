@@ -75,14 +75,11 @@ public class Runigram {
 	 */
 	public static Color[][] flippedHorizontally(Color[][] image) {
 		Color[][] returnarr = new Color[image.length][image[0].length];
-		int counter = 0 ;
 		for(int i = 0 ; i < image.length; i++){
-			for(int j=image[0].length; j>0; j--){	
-				returnarr[i][counter] = image[i][j];
-				counter++;
+			for(int j=0; j<image[0].length; j++){	
+				returnarr[i][j] = image[i][image[0].length-j-1];
 			}
-			counter = 0; 
-		}
+	}
 		 return returnarr;
 	}
 	
