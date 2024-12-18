@@ -41,7 +41,7 @@ public class Runigram {
 				r = in.readInt();
 				g = in.readInt();
 				l = in.readInt();
-				image[i][j] = new Color(r, g, j);
+				image[i][j] = new Color(r, g, l);
 			}
 		}
 		return image;
@@ -182,7 +182,7 @@ public class Runigram {
 		for(int i = 0; i < n;i++){
 			Color[][] morph = blend(source, tar, (double)((n - i) / n));
 			display(morph);
-			StdDraw.pause(500);
+			StdDraw.pause(1000);
 		}	}
 	
 	/** Creates a canvas for the given image. */
